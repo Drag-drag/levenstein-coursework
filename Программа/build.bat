@@ -4,8 +4,8 @@ cd /d "%~dp0"
 
 where javac >nul 2>nul
 if errorlevel 1 (
-    echo ОШИБКА: компилятор javac не найден.
-    echo Установите JDK 17 или новее и добавьте его папку bin в PATH.
+    echo ERROR: javac not found.
+    echo Install JDK 17 or newer and add its bin folder to PATH.
     pause
     exit /b 1
 )
@@ -15,10 +15,10 @@ if not exist out mkdir out
 javac -encoding UTF-8 -d out src\levenshtein\*.java
 if errorlevel 1 (
     echo.
-    echo Сборка завершена с ошибками.
+    echo Build failed.
     pause
     exit /b 1
 )
 
-echo Сборка завершена успешно. Классы находятся в папке out.
+echo Build OK. Classes are in the out folder.
 pause
