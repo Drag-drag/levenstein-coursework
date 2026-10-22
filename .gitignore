@@ -1,0 +1,17 @@
+# Сборка Java
+out/
+*.class
+*.jar
+
+# Временные файлы Office
+~$*
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+
+# Системные файлы
+Thumbs.db
+desktop.ini
+.DS_Store
